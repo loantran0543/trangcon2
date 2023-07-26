@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+
+
+header {
+	background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("1.jpeg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 100px;
+	color: white;
+}
+
+header img{
+	width: auto;
+	height: 150px;
+}
+
+header .trai {
+	display: flex;
+	justify-content: space-between;
+	width: 300px;
+	height: 20px;
+	padding-top: 20px;
+}
+
+.trai a{
+	text-decoration: none;
+	color: white;
+}
+
+.trai a:hover{
+	color:#B26D5E;
+}
+
+header .phai{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 400px;
+	height: 30px;
+	padding: 25px 0;
+}
+
+.phai .button a{
+	position: relative;
+	display: inline-block;
+	font-size: 16px;
+	letter-spacing: 0.1rem;
+	text-decoration: none;
+	font-weight: 500px;
+	color: white;
+	border: 1px solid white;
+	padding: 10px 20px;	
+}
+
+.phai .button a span{
+	position: absolute;
+	display: block;
+	background: #B26D5E;
+}
+
+.phai .button a span:nth-child(1){
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 2px;
+	transform-origin: left;
+	transform: scaleX(0);
+	transition: transform 0.2s;
+}
+
+.phai .button a:hover span:nth-child(1){
+	transform: scaleX(1);
+	transition-delay: 0.3s;
+}
+
+.phai .button a span:nth-child(2){
+	right:0;
+	top:0;
+	width: 2px;
+	height: 100%;
+	transform-origin: top;
+	transform: scaleY(0);
+	transition: transform 0.2s;
+}
+
+.phai .button a:hover span:nth-child(2){
+	transform: scaleY(1);
+}
+
+.phai .button a span:nth-child(3){
+	right:0;
+	bottom:0;
+	width: 100%;
+	height: 2px;
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 0.2s;
+}
+
+.phai .button a:hover span:nth-child(3){
+	transform: scaleX(1);
+	transition-delay: 0.2s;
+}
+
+.phai .button a span:nth-child(4){
+	left:0;
+	bottom:0;
+	width: 2px;
+	height: 100%;
+	transform-origin: bottom;
+	transform: scaleY(0);
+	transition: transform 0.2s;
+}
+
+.phai .button a:hover span:nth-child(4){
+	transform: scaleY(1);
+	transition-delay: 0.3s;
+}
+
+.phai .button a:hover{
+	border: none;
+	color:#B26D5E;
+}
+
+.body1{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #181818;
+}
+.wrapper{
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+}
+.card{
+	width: 280px;
+	height: 360px;
+	border-radius: 15px;
+	padding: 2rem 1rem;
+	background: white;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	transition: 0.5s ease-in-out;
+	box-shadow: 0px 7px 10px rgba(black, 0.5);
+	margin:50px;
+}
+.card:hover{
+		transform: translateY(20px);
+}
+.card:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		border-radius: 15px;
+		background: rgba(black, 0.6);
+		z-index: 2;
+		transition: 0.5s all;
+		opacity: 0;
+}
+.card:hover:before{
+	opacity: 1;
+}
+.card img{
+		
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+}
+.card .info{
+	position: relative;
+	z-index:3;
+	color: white;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+}
+.card:hover .info{
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.info{
+		position: relative;
+		z-index: 3;
+		color: white;
+		opacity: 0;
+		transform: translateY(30px);
+		transition: 0.5s;
+}
+.card .info h1{
+			margin: 0px;
+}
+.card .info p{
+			letter-spacing: 1px;
+			font-size: 15px;
+			margin-bottom: 8px;
+}
+.card .info button{
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+	border:none;
+}
+.card .info button:hover{
+	box-shadow: 0px 7px  10px rgba(0,0,0,0.5);
+}
+
+.tong{
+	display: flex;
+	margin-top: 100px;
+}
+
+
+
+footer{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	background-color: #181818;
+	color: white;
+	padding: 100px 0;
+}
+footer img{
+	width: 40%;
+}
+.leftbox h4,p{
+	padding: 10px 0;
+}
+.leftbox{
+	text-align: left;
+}
+.rightbox{
+	background-color: #B26D5E;
+	width: 30%;
+	padding: 40px;
+}
+.rightbox input,textarea{
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	padding: 5px;
+	
+	}
+.nutbam{
+	background: transparent;
+	border: 1px solid black;
+	padding: 10px 20px;
+	color: black;
+} 
+
+.nutbam:hover{
+	border:  1px solid white;
+	color: white
+}
